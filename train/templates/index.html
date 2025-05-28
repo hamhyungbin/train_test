@@ -1,0 +1,30 @@
+<!DOCTYPE html>
+<html lang="ko">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>수도권 지하철 경로 검색</title>
+    <style>
+        body { font-family: sans-serif; max-width: 600px; margin: 50px auto; padding: 20px; border: 1px solid #ddd; border-radius: 8px; }
+        h1 { text-align: center; }
+        .form-group { margin-bottom: 15px; }
+        label { display: block; margin-bottom: 5px; }
+        input[type="text"] { width: 100%; padding: 8px; box-sizing: border-box; }
+        button { width: 100%; padding: 10px; background-color: #007bff; color: white; border: none; border-radius: 4px; cursor: pointer; }
+    </style>
+</head>
+<body>
+    <h1>수도권 지하철 경로 검색</h1>
+    <form action="/search_route" method="get">
+        <div class="form-group">
+            <label for="start_station">출발역 ID</label>
+            <input type="text" id="start_station" name="start_station" placeholder="예: 222 (강남역)" required>
+        </div>
+        <div class="form-group">
+            <label for="end_station">도착역 ID</label>
+            <input type="text" id="end_station" name="end_station" placeholder="예: 216 (잠실역)" required>
+        </div>
+        <button type="submit">경로 검색</button>
+    </form>
+</body>
+</html>
